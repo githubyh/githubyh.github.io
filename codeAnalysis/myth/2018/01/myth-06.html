@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>myth-06</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///C:\Users\yango\.atom\packages\markdown-preview-enhanced\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+      <style> 
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+ 
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview   ">
+      <h1 class="mume-header" id="myth%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%E7%B3%BB%E5%88%97%E4%B9%8B%E5%85%AD-%E8%AE%A2%E5%8D%95%E4%B8%8B%E5%8D%95%E6%B5%81%E7%A8%8B%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%E5%8F%91%E8%B5%B7%E8%80%85">Myth源码解析系列之（六）- 订单下单流程源码解析（发起者）</h1>
+
+<p>前面一章我们走完了服务启动的源码，这次我们进入下单流程的源码解析~</p>
+<h3 class="mume-header" id="%E8%AE%A2%E5%8D%95%E4%B8%8B%E5%8D%95%E6%B5%81%E7%A8%8B%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%E5%8F%91%E8%B5%B7%E8%80%85">订单下单流程源码解析（发起者）</h3>
+
+<p>首先保证myth-demo-springcloud-order、myth-demo-springcloud-inventory、myth-demo-springcloud-eureka、myth-demo-springcloud-account 服务以正常启动</p>
+<p>进入源码分析前，这里先给大家预热下，介绍下几个关键部分</p>
+<ol>
+<li>事务角色</li>
+</ol>
+<pre class="language-java"><span class="token keyword">public</span> <span class="token keyword">enum</span> MythRoleEnum <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">/**
+     * Start myth role enum.
+     * 这里主要为： orderServer
+     */</span>
+    <span class="token function">START</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">"发起者"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token comment" spellcheck="true">/**
+     * Consumer myth role enum.
+     */</span>
+    <span class="token function">LOCAL</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">"本地执行"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token comment" spellcheck="true">/**
+     * Provider myth role enum.
+     * 这里主要为： accountServer, inventoryServer
+     */</span>
+    <span class="token function">PROVIDER</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token string">"提供者"</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+</pre>
+<ol start="2">
+<li>事务状态</li>
+</ol>
+<pre class="language-java">
+<span class="token keyword">public</span> <span class="token keyword">enum</span> MythStatusEnum <span class="token punctuation">{</span>
+
+    <span class="token comment" spellcheck="true">/**
+     * Commit myth status enum.
+     */</span>
+    <span class="token function">COMMIT</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">"已经提交"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token comment" spellcheck="true">/**
+     * Begin myth status enum.
+     */</span>
+    <span class="token function">BEGIN</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">"开始"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token comment" spellcheck="true">/**
+     * Failure myth status enum.
+     */</span>
+    <span class="token function">FAILURE</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token string">"失败"</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  这里主要列了我们所使用的部分，没用的忽略
+</pre>
+<p>这个东西为什么在这里先讲，主要是为了让大家先了解下有这个东西，这样有助于后续代码理解 ~~  正所谓擒贼先擒王，抓住重点部位你就离成功不远鸟 O(∩_∩)O</p>
+<p>时序图<br>
+<img src="../../img/order05.png" alt="&#x65F6;&#x5E8F;&#x56FE;"></p>
+<p>订单下单接口入口：<a href="http://localhost:8884/swagger-ui.html">http://localhost:8884/swagger-ui.html</a></p>
+<p><img src="../../img/order-index.png" alt="&#x4E0B;&#x5355;&#x754C;&#x9762;"><br>
+输入： 下单数量count: 1，  金额amount： 100 ，狠狠点   【Try it out!】,发起下单请求， 我们会进入<b>OrderController.orderPay</b>方法</p>
+<pre class="language-java"><span class="token annotation punctuation">@PostMapping</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">"/orderPay"</span><span class="token punctuation">)</span>
+<span class="token annotation punctuation">@ApiOperation</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">"订单下单接口（注意这里模拟的是创建订单并进行下单扣减库存等操作）"</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> String <span class="token function">orderPay</span><span class="token punctuation">(</span><span class="token annotation punctuation">@RequestParam</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">"count"</span><span class="token punctuation">)</span> Integer count<span class="token punctuation">,</span>
+                       <span class="token annotation punctuation">@RequestParam</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">"amount"</span><span class="token punctuation">)</span> BigDecimal amount<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">return</span> orderService<span class="token punctuation">.</span><span class="token function">orderPay</span><span class="token punctuation">(</span>count<span class="token punctuation">,</span> amount<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span>
+
+接着进入orderServiceImpl<span class="token punctuation">.</span>orderPay 方法
+<span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> String <span class="token function">orderPay</span><span class="token punctuation">(</span>Integer count<span class="token punctuation">,</span> BigDecimal amount<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">final</span> Order order <span class="token operator">=</span> <span class="token function">buildOrder</span><span class="token punctuation">(</span>count<span class="token punctuation">,</span> amount<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">final</span> <span class="token keyword">int</span> rows <span class="token operator">=</span> orderMapper<span class="token punctuation">.</span><span class="token function">save</span><span class="token punctuation">(</span>order<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>rows <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            paymentService<span class="token punctuation">.</span><span class="token function">makePayment</span><span class="token punctuation">(</span>order<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+
+        <span class="token keyword">return</span> <span class="token string">"success"</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+</pre>
+<p>这里我们发现封装了order对象然后进行了持久化操作，成功后，我们调用<b>paymentService.makePayment(order); </b> 重点来了，我们先来看下<b>paymentService.makePayment</b>方法体的代码</p>
+<pre class="language-java">    <span class="token annotation punctuation">@Override</span>
+    <span class="token annotation punctuation">@Myth</span><span class="token punctuation">(</span>destination <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">makePayment</span><span class="token punctuation">(</span>Order order<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+
+        <span class="token comment" spellcheck="true">//检查数据 这里只是demo 只是demo 只是demo</span>
+
+        <span class="token keyword">final</span> AccountDO accountDO <span class="token operator">=</span>
+                accountClient<span class="token punctuation">.</span><span class="token function">findByUserId</span><span class="token punctuation">(</span>order<span class="token punctuation">.</span><span class="token function">getUserId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">if</span><span class="token punctuation">(</span>accountDO<span class="token punctuation">.</span><span class="token function">getBalance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">compareTo</span><span class="token punctuation">(</span>order<span class="token punctuation">.</span><span class="token function">getTotalAmount</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">&lt;=</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">MythRuntimeException</span><span class="token punctuation">(</span><span class="token string">"余额不足！"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">final</span> InventoryDO inventoryDO <span class="token operator">=</span>
+                inventoryClient<span class="token punctuation">.</span><span class="token function">findByProductId</span><span class="token punctuation">(</span>order<span class="token punctuation">.</span><span class="token function">getProductId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">if</span><span class="token punctuation">(</span>inventoryDO<span class="token punctuation">.</span><span class="token function">getTotalInventory</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> order<span class="token punctuation">.</span><span class="token function">getCount</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">MythRuntimeException</span><span class="token punctuation">(</span><span class="token string">"库存不足！"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        order<span class="token punctuation">.</span><span class="token function">setStatus</span><span class="token punctuation">(</span>OrderStatusEnum<span class="token punctuation">.</span>PAY_SUCCESS<span class="token punctuation">.</span><span class="token function">getCode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        orderMapper<span class="token punctuation">.</span><span class="token function">update</span><span class="token punctuation">(</span>order<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//扣除用户余额</span>
+        AccountDTO accountDTO <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">AccountDTO</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        accountDTO<span class="token punctuation">.</span><span class="token function">setAmount</span><span class="token punctuation">(</span>order<span class="token punctuation">.</span><span class="token function">getTotalAmount</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        accountDTO<span class="token punctuation">.</span><span class="token function">setUserId</span><span class="token punctuation">(</span>order<span class="token punctuation">.</span><span class="token function">getUserId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        accountClient<span class="token punctuation">.</span><span class="token function">payment</span><span class="token punctuation">(</span>accountDTO<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment" spellcheck="true">//进入扣减库存操作</span>
+        InventoryDTO inventoryDTO <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">InventoryDTO</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        inventoryDTO<span class="token punctuation">.</span><span class="token function">setCount</span><span class="token punctuation">(</span>order<span class="token punctuation">.</span><span class="token function">getCount</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        inventoryDTO<span class="token punctuation">.</span><span class="token function">setProductId</span><span class="token punctuation">(</span>order<span class="token punctuation">.</span><span class="token function">getProductId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        inventoryClient<span class="token punctuation">.</span><span class="token function">decrease</span><span class="token punctuation">(</span>inventoryDTO<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</pre>
+<p>方法具体业务我们暂且先不看，重点我们看下方法头部是不是有个<b>@Myth</b>注解，这就是实现分布式事务的关键，分布式事务主要通过<b>@Myth</b>注解来关联实现，这是基于aop切面思想，既然这样那么必定会有一个切入点，下面我们找到<b>myth-core工程AbstractMythTransactionAspect</b>类，原来这就是定义<b>@Myth</b>切入点的地方啊~</p>
+<pre class="language-java"><span class="token annotation punctuation">@Aspect</span>
+<span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">AbstractMythTransactionAspect</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">private</span> MythTransactionInterceptor mythTransactionInterceptor<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setMythTransactionInterceptor</span><span class="token punctuation">(</span>MythTransactionInterceptor mythTransactionInterceptor<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>mythTransactionInterceptor <span class="token operator">=</span> mythTransactionInterceptor<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Pointcut</span><span class="token punctuation">(</span><span class="token string">"@annotation(com.github.myth.annotation.Myth)"</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">mythTransactionInterceptor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Around</span><span class="token punctuation">(</span><span class="token string">"mythTransactionInterceptor()"</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> Object <span class="token function">interceptCompensableMethod</span><span class="token punctuation">(</span>ProceedingJoinPoint proceedingJoinPoint<span class="token punctuation">)</span> <span class="token keyword">throws</span> Throwable <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> mythTransactionInterceptor<span class="token punctuation">.</span><span class="token function">interceptor</span><span class="token punctuation">(</span>proceedingJoinPoint<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment" spellcheck="true">/**
+     * spring Order 接口，该值的返回直接会影响springBean的加载顺序
+     *
+     * @return int 类型
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">int</span> <span class="token function">getOrder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</pre>
+<p>可以知道Spring实现类的方法凡是加了@Myth注解的，在调用的时候，都会进行 <b>mythTransactionInterceptor.interceptor </b>调用。也就是说一个请求链中，只要有标记该注解的业务方法，都会被加入到同一组分布式事务当中来，也就是说这么些个业务方法，要么全部执行成功，反之全部不执行~。</p>
+<p><b>AbstractMythTransactionAspect </b>是一个抽象类，下面我们看看它的实现<br>
+<img src="../../img/order03.png" alt="&#x5B9E;&#x73B0;mythaspect"><br>
+我们发现针对每种rpc都对应着有一个实现类，下面我们来看</p>
+<pre class="language-java"><span class="token annotation punctuation">@Aspect</span>
+<span class="token annotation punctuation">@Component</span>
+                                    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SpringCloudMythTransactionAspect</span> <span class="token keyword">extends</span> <span class="token class-name">AbstractMythTransactionAspect</span> <span class="token keyword">implements</span> <span class="token class-name">Ordered</span> <span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@Autowired</span>
+    <span class="token keyword">public</span> <span class="token function">SpringCloudMythTransactionAspect</span><span class="token punctuation">(</span>SpringCloudMythTransactionInterceptor springCloudMythTransactionInterceptor<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setMythTransactionInterceptor</span><span class="token punctuation">(</span>springCloudMythTransactionInterceptor<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">getOrder</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> Ordered<span class="token punctuation">.</span>HIGHEST_PRECEDENCE<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</pre>
+<p>我们注意到它实现了Spring的Ordered接口，并重写了 getOrder 方法，返回了 <b>Ordered.HIGHEST_PRECEDENCE</b> 那么可以知道，他是优先级最高的切面，这里<b>dubbo,motan</b>也是一样。 我们再来看<b>MythTransactionInterceptor<br>
+接口，也是类似，springcloud、dubbo、motan</b>都对应一个实现类<br>
+<img src="../../img/order04.png" alt="MythTransactionInterceptor&#x5B9E;&#x73B0;&#x7C7B;"><br>
+看完这里我们知道，我们知道此时代码不会直接进入<b>paymentService.makePayment</b>方法，而是先进入切面<b>SpringCloudMythTransactionInterceptor</b>，代码如下</p>
+<pre class="language-java"><span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> Object <span class="token function">interceptor</span><span class="token punctuation">(</span>ProceedingJoinPoint pjp<span class="token punctuation">)</span> <span class="token keyword">throws</span> Throwable <span class="token punctuation">{</span>
+        MythTransactionContext mythTransactionContext <span class="token operator">=</span> TransactionContextLocal<span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>Objects<span class="token punctuation">.</span><span class="token function">nonNull</span><span class="token punctuation">(</span>mythTransactionContext<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span>
+                mythTransactionContext<span class="token punctuation">.</span><span class="token function">getRole</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> MythRoleEnum<span class="token punctuation">.</span>LOCAL<span class="token punctuation">.</span><span class="token function">getCode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            mythTransactionContext <span class="token operator">=</span> TransactionContextLocal<span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            RequestAttributes requestAttributes <span class="token operator">=</span> RequestContextHolder<span class="token punctuation">.</span><span class="token function">currentRequestAttributes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            HttpServletRequest request <span class="token operator">=</span> requestAttributes <span class="token operator">==</span> null <span class="token operator">?</span> null <span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>ServletRequestAttributes<span class="token punctuation">)</span> requestAttributes<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            String context <span class="token operator">=</span> request <span class="token operator">==</span> null <span class="token operator">?</span> null <span class="token operator">:</span> request<span class="token punctuation">.</span><span class="token function">getHeader</span><span class="token punctuation">(</span>CommonConstant<span class="token punctuation">.</span>MYTH_TRANSACTION_CONTEXT<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>StringUtils<span class="token punctuation">.</span><span class="token function">isNoneBlank</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                mythTransactionContext <span class="token operator">=</span>
+                        GsonUtils<span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">fromJson</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span> MythTransactionContext<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> mythTransactionAspectService<span class="token punctuation">.</span><span class="token function">invoke</span><span class="token punctuation">(</span>mythTransactionContext<span class="token punctuation">,</span> pjp<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</pre>
+<p>走到这里，因为第一次进来这些变量都没有值(按理说第一次一般都记忆深刻啊~~)，所以我们会直接进入<b>mythTransactionAspectService.invoke(mythTransactionContext, pjp)</b>， 此时<b>mythTransactionContext为null</b>，<br>
+接下来我们进入<b>MythTransactionAspectServiceImpl.invoke</b>方法</p>
+<pre class="language-java"><span class="token keyword">public</span> Object <span class="token function">invoke</span><span class="token punctuation">(</span>MythTransactionContext mythTransactionContext<span class="token punctuation">,</span> ProceedingJoinPoint point<span class="token punctuation">)</span> <span class="token keyword">throws</span> Throwable <span class="token punctuation">{</span>
+        <span class="token keyword">final</span> Class <span class="token class-name">clazz</span> <span class="token operator">=</span> mythTransactionFactoryService<span class="token punctuation">.</span><span class="token function">factoryOf</span><span class="token punctuation">(</span>mythTransactionContext<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">final</span> MythTransactionHandler mythTransactionHandler <span class="token operator">=</span>
+                <span class="token punctuation">(</span>MythTransactionHandler<span class="token punctuation">)</span> SpringBeanUtils<span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getBean</span><span class="token punctuation">(</span>clazz<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> mythTransactionHandler<span class="token punctuation">.</span><span class="token function">handler</span><span class="token punctuation">(</span>point<span class="token punctuation">,</span> mythTransactionContext<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</pre>
+<p>然后再进入MythTransactionFactoryServiceImpl.factoryOf</p>
+<pre class="language-java"><span class="token comment" spellcheck="true">/**
+     * 返回 实现TxTransactionHandler类的名称
+     *
+     * @param context 事务上下文
+     * @return Class&lt;T>
+     * @throws Throwable 抛出异常
+     */</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> Class <span class="token class-name">factoryOf</span><span class="token punctuation">(</span>MythTransactionContext context<span class="token punctuation">)</span> <span class="token keyword">throws</span> Throwable <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//如果事务还没开启或者 myth事务上下文是空， 那么应该进入发起调用</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>mythTransactionManager<span class="token punctuation">.</span><span class="token function">isBegin</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> Objects<span class="token punctuation">.</span><span class="token function">isNull</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> StartMythTransactionHandler<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>context<span class="token punctuation">.</span><span class="token function">getRole</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> MythRoleEnum<span class="token punctuation">.</span>LOCAL<span class="token punctuation">.</span><span class="token function">getCode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> LocalMythTransactionHandler<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">return</span> ActorMythTransactionHandler<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+</pre>
+<p>重点来了，前面我们介绍了分布式事务角色，这里就是判断分布式事务角色的入口，根据判断我们进入发起者角色，也就是<b>StartMythTransactionHandler.handler</b>方法</p>
+<pre class="language-java"><span class="token comment" spellcheck="true">/**
+     * Myth分布式事务处理接口
+     *
+     * @param point                  point 切点
+     * @param mythTransactionContext myth事务上下文
+     * @return Object
+     * @throws Throwable 异常
+     */</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> Object <span class="token function">handler</span><span class="token punctuation">(</span>ProceedingJoinPoint point<span class="token punctuation">,</span> MythTransactionContext mythTransactionContext<span class="token punctuation">)</span> <span class="token keyword">throws</span> Throwable <span class="token punctuation">{</span>
+        <span class="token keyword">try</span> <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">//主要防止并发问题，对事务日志的写造成压力，加了锁进行处理</span>
+            <span class="token keyword">try</span> <span class="token punctuation">{</span>
+                LOCK<span class="token punctuation">.</span><span class="token function">lock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                mythTransactionManager<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span>point<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">finally</span> <span class="token punctuation">{</span>
+                LOCK<span class="token punctuation">.</span><span class="token function">unlock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+           <span class="token keyword">return</span>  point<span class="token punctuation">.</span><span class="token function">proceed</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">finally</span> <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">//发送消息</span>
+            mythTransactionManager<span class="token punctuation">.</span><span class="token function">sendMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            mythTransactionManager<span class="token punctuation">.</span><span class="token function">cleanThreadLocal</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            TransactionContextLocal<span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+</pre>
+<p>接下来进入<b>mythTransactionManager.begin(point)</b>;</p>
+<pre class="language-java"><span class="token keyword">public</span> MythTransaction <span class="token function">begin</span><span class="token punctuation">(</span>ProceedingJoinPoint point<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        LogUtil<span class="token punctuation">.</span><span class="token function">debug</span><span class="token punctuation">(</span>LOGGER<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token string">"开始执行Myth分布式事务！start"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        MythTransaction mythTransaction <span class="token operator">=</span> <span class="token function">getCurrentTransaction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>Objects<span class="token punctuation">.</span><span class="token function">isNull</span><span class="token punctuation">(</span>mythTransaction<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+            MethodSignature signature <span class="token operator">=</span> <span class="token punctuation">(</span>MethodSignature<span class="token punctuation">)</span> point<span class="token punctuation">.</span><span class="token function">getSignature</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            Method method <span class="token operator">=</span> signature<span class="token punctuation">.</span><span class="token function">getMethod</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            Class<span class="token operator">&lt;</span><span class="token operator">?</span><span class="token operator">></span> clazz <span class="token operator">=</span> point<span class="token punctuation">.</span><span class="token function">getTarget</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            mythTransaction <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MythTransaction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            mythTransaction<span class="token punctuation">.</span><span class="token function">setStatus</span><span class="token punctuation">(</span>MythStatusEnum<span class="token punctuation">.</span>BEGIN<span class="token punctuation">.</span><span class="token function">getCode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            mythTransaction<span class="token punctuation">.</span><span class="token function">setRole</span><span class="token punctuation">(</span>MythRoleEnum<span class="token punctuation">.</span>START<span class="token punctuation">.</span><span class="token function">getCode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            mythTransaction<span class="token punctuation">.</span><span class="token function">setTargetClass</span><span class="token punctuation">(</span>clazz<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            mythTransaction<span class="token punctuation">.</span><span class="token function">setTargetMethod</span><span class="token punctuation">(</span>method<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment" spellcheck="true">//保存当前事务信息</span>
+        coordinatorCommand<span class="token punctuation">.</span><span class="token function">execute</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">CoordinatorAction</span><span class="token punctuation">(</span>CoordinatorActionEnum<span class="token punctuation">.</span>SAVE<span class="token punctuation">,</span> mythTransaction<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment" spellcheck="true">//当前事务保存到ThreadLocal</span>
+        CURRENT<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span>mythTransaction<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment" spellcheck="true">//设置myth事务上下文，这个类会传递给远端</span>
+        MythTransactionContext context <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MythTransactionContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment" spellcheck="true">//设置事务id</span>
+        context<span class="token punctuation">.</span><span class="token function">setTransId</span><span class="token punctuation">(</span>mythTransaction<span class="token punctuation">.</span><span class="token function">getTransId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment" spellcheck="true">//设置为发起者角色</span>
+        context<span class="token punctuation">.</span><span class="token function">setRole</span><span class="token punctuation">(</span>MythRoleEnum<span class="token punctuation">.</span>START<span class="token punctuation">.</span><span class="token function">getCode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        TransactionContextLocal<span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">return</span> mythTransaction<span class="token punctuation">;</span>
+
+    <span class="token punctuation">}</span>
+</pre>
+<p>这个方法主要做两件事，首先封装分布式事务消息（MythTransaction）进行持久化（这里重点关注下<b>mythTransaction.setStatus(MythStatusEnum.BEGIN.getCode());</b>事务状态为开始，<br>
+<b>mythTransaction.setRole(MythRoleEnum.START.getCode());</b>事务角色为发起者，后续会用到），然后再设置<b>MythTransactionContext</b>事务上下文，这个主要用来传输给远端服务，这里远端服务可以理解为事务参与方。（注意这里两个消息对象都分别放到了ThreadLocal变量中）</p>
+<p>关注下持久化操作是如何做的？</p>
+<pre class="language-java"><span class="token comment" spellcheck="true">//保存当前事务信息</span>
+        coordinatorCommand<span class="token punctuation">.</span><span class="token function">execute</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">CoordinatorAction</span><span class="token punctuation">(</span>CoordinatorActionEnum<span class="token punctuation">.</span>SAVE<span class="token punctuation">,</span> mythTransaction<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">//跟踪进去最后执行的是下面这段代码</span>
+        <span class="token annotation punctuation">@Override</span>
+           <span class="token keyword">public</span> Boolean <span class="token function">submit</span><span class="token punctuation">(</span>CoordinatorAction coordinatorAction<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+               <span class="token keyword">try</span> <span class="token punctuation">{</span>
+                   QUEUE<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>coordinatorAction<span class="token punctuation">)</span><span class="token punctuation">;</span>
+               <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">InterruptedException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                   e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                   <span class="token keyword">return</span> Boolean<span class="token punctuation">.</span>FALSE<span class="token punctuation">;</span>
+               <span class="token punctuation">}</span>
+               <span class="token keyword">return</span> Boolean<span class="token punctuation">.</span>TRUE<span class="token punctuation">;</span>
+           <span class="token punctuation">}</span>
+
+</pre>
+<p>我们发现消息是发送给一个QUEUE队列，大家还记得之前讲服务启动源码解析，专门开了一个线程池任务来消费QUEUE队列做消息持久化操作，对的，消息就是在这里放进去的。</p>
+<p>好了，到此我们begin方法已经走完， 下面会调用point.proceed();就正式进入到业务方法<b>paymentService.makePayment(order)</b>中，这个方法里主要也是做两件事，一个调用<b>Account</b>服务进行账户余额扣减，另一个调用<b>Inventory</b>服务进行库存扣减，这两个是通过调用接口来实现, 关键代码如下</p>
+<pre class="language-java">accountClient<span class="token punctuation">.</span><span class="token function">payment</span><span class="token punctuation">(</span>accountDTO<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//AccountClient.payment方法定义</span>
+  <span class="token comment" spellcheck="true">/**
+    * 用户账户付款
+    *
+    * @param accountDO 实体类
+    * @return true 成功
+    */</span>
+   <span class="token annotation punctuation">@PostMapping</span><span class="token punctuation">(</span><span class="token string">"/account-service/account/payment"</span><span class="token punctuation">)</span>
+   <span class="token annotation punctuation">@Myth</span><span class="token punctuation">(</span>destination <span class="token operator">=</span> <span class="token string">"account"</span><span class="token punctuation">,</span> target <span class="token operator">=</span> AccountService<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span>
+   Boolean <span class="token function">payment</span><span class="token punctuation">(</span><span class="token annotation punctuation">@RequestBody</span> AccountDTO accountDO<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    inventoryClient<span class="token punctuation">.</span><span class="token function">decrease</span><span class="token punctuation">(</span>inventoryDTO<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//InventoryClient.decrease方法定义</span>
+<span class="token comment" spellcheck="true">/**
+  * 库存扣减
+  *
+  * @param inventoryDTO 实体对象
+  * @return true 成功
+  */</span>
+<span class="token annotation punctuation">@Myth</span><span class="token punctuation">(</span>destination <span class="token operator">=</span> <span class="token string">"inventory"</span><span class="token punctuation">,</span>target <span class="token operator">=</span> InventoryService<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span>
+<span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"/inventory-service/inventory/decrease"</span><span class="token punctuation">)</span>
+Boolean <span class="token function">decrease</span><span class="token punctuation">(</span><span class="token annotation punctuation">@RequestBody</span> InventoryDTO inventoryDTO<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre>
+<p>注意到么，账户扣款和库存扣减方法都标记有<b>@Myth</b>注解，而另外两个查询方法是没有的。我们知道springAop的特性，在接口上加注解，是无法进入切面的，所以我们在这里，要采用rpc框架的某些特性来帮助我们获取到 <b>@Myth</b>注解信息, 这一步很重要。这里我们演示的是springcloud，所以进入<b>myth-springcloud</b>工程的<b>MythFeignHandler</b>类。（其中<b>dubbo，与motan</b>这部分实现分别对应：<b>DubboMythTransactionFilter 和 MotanMythTransactionFilter</b> 类， 都是通过框架自身过滤器特性来实现， 逻辑与springcloud一样，只是实现上有少许差别~ 童鞋们一看便知，这里不再赘述~）</p>
+<pre class="language-java"><span class="token keyword">public</span> Object <span class="token function">invoke</span><span class="token punctuation">(</span>Object proxy<span class="token punctuation">,</span> Method method<span class="token punctuation">,</span> Object<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token keyword">throws</span> Throwable <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>Object<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>method<span class="token punctuation">.</span><span class="token function">getDeclaringClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> method<span class="token punctuation">.</span><span class="token function">invoke</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+
+            <span class="token keyword">final</span> Myth myth <span class="token operator">=</span> method<span class="token punctuation">.</span><span class="token function">getAnnotation</span><span class="token punctuation">(</span>Myth<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>Objects<span class="token punctuation">.</span><span class="token function">isNull</span><span class="token punctuation">(</span>myth<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>handlers<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>method<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">invoke</span><span class="token punctuation">(</span>args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">try</span> <span class="token punctuation">{</span>
+                <span class="token keyword">final</span> MythTransactionManager mythTransactionManager <span class="token operator">=</span>
+                        SpringBeanUtils<span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getBean</span><span class="token punctuation">(</span>MythTransactionManager<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+                <span class="token keyword">final</span> MythParticipant participant <span class="token operator">=</span> <span class="token function">buildParticipant</span><span class="token punctuation">(</span>myth<span class="token punctuation">,</span> method<span class="token punctuation">,</span> args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>Objects<span class="token punctuation">.</span><span class="token function">nonNull</span><span class="token punctuation">(</span>participant<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    mythTransactionManager<span class="token punctuation">.</span><span class="token function">registerParticipant</span><span class="token punctuation">(</span>participant<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>handlers<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>method<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">invoke</span><span class="token punctuation">(</span>args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Throwable</span> throwable<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                throwable<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+
+
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+
+    <span class="token keyword">private</span> MythParticipant <span class="token function">buildParticipant</span><span class="token punctuation">(</span>Myth myth<span class="token punctuation">,</span> Method method<span class="token punctuation">,</span> Object<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+        <span class="token keyword">final</span> MythTransactionContext mythTransactionContext <span class="token operator">=</span>
+                TransactionContextLocal<span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        MythParticipant participant<span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>Objects<span class="token punctuation">.</span><span class="token function">nonNull</span><span class="token punctuation">(</span>mythTransactionContext<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+            <span class="token keyword">final</span> Class <span class="token class-name">declaringClass</span> <span class="token operator">=</span> myth<span class="token punctuation">.</span><span class="token function">target</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            MythInvocation mythInvocation <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MythInvocation</span><span class="token punctuation">(</span>declaringClass<span class="token punctuation">,</span>
+                    method<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                    method<span class="token punctuation">.</span><span class="token function">getParameterTypes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token keyword">final</span> Integer pattern <span class="token operator">=</span> myth<span class="token punctuation">.</span><span class="token function">pattern</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getCode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token comment" spellcheck="true">//封装调用点</span>
+            participant <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MythParticipant</span><span class="token punctuation">(</span>
+                    mythTransactionContext<span class="token punctuation">.</span><span class="token function">getTransId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                    myth<span class="token punctuation">.</span><span class="token function">destination</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                    pattern<span class="token punctuation">,</span>
+                    mythInvocation<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token keyword">return</span> participant<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> null<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</pre>
+<p>从源码得知，只有方法上打了@Myth注解的才会进入后续逻辑，否则直接执行返回，我们详细看下<b>buildParticipant(myth, method, args);</b>方法，首先从<b>TransactionContextLocal.getInstance().get()</b>获取事务上下文对象<b>MythTransactionContext</b>，这里有值吗？ 是的因为前面我们已经设置值了，所以这里能拿到值，这里大家注意下<b>destination,target</b>这两个属性， destination这是就是消息中间件使用的队列名称，不同服务定义不同队列来发送消息，target为目标业务calss,获取到相关值后对MythParticipant进行封装并返回，接下来我们继续往下走，进入<b>MythTransactionManager.registerParticipant</b></p>
+<pre class="language-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">registerParticipant</span><span class="token punctuation">(</span>MythParticipant participant<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+       <span class="token keyword">final</span> MythTransaction transaction <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getCurrentTransaction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+       transaction<span class="token punctuation">.</span><span class="token function">registerParticipant</span><span class="token punctuation">(</span>participant<span class="token punctuation">)</span><span class="token punctuation">;</span>
+       coordinatorService<span class="token punctuation">.</span><span class="token function">updateParticipant</span><span class="token punctuation">(</span>transaction<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</pre>
+<p>我们发现这里其实就是对前面<b>MythTransaction</b>持久化的一个更新操作，主要更新调用其他子系统接口需要执行的class，method等信息，这个消息后面会通过mq进行投递，其他子系统通过消费来进行本地执行。</p>
+<p>好了，到此我们已经走完了发起者大部分了，紧接着就是调用执行account,Inventory服务了，也就是参与者部分，这里我们发现还有finally快部分代码未走完， 稍稍休息下，详情请见下回分解~~</p>
+<p><b>大家有任何问题或者建议欢迎沟通 ，欢迎加入QQ群：162614487 进行交流</b></p>
+
+      </div>
+      <div class="md-sidebar-toc"><ul>
+<li><a href="#myth%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%E7%B3%BB%E5%88%97%E4%B9%8B%E5%85%AD-%E8%AE%A2%E5%8D%95%E4%B8%8B%E5%8D%95%E6%B5%81%E7%A8%8B%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%E5%8F%91%E8%B5%B7%E8%80%85">Myth源码解析系列之（六）- 订单下单流程源码解析（发起者）</a><br>
+* <a href="#%E8%AE%A2%E5%8D%95%E4%B8%8B%E5%8D%95%E6%B5%81%E7%A8%8B%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%E5%8F%91%E8%B5%B7%E8%80%85">订单下单流程源码解析（发起者）</a></li>
+</ul>
+</div>
+      <a id="sidebar-toc-btn">≡</a>
+    </body>
+    
+    
+    
+    
+    
+    <script>
+(function bindTaskListEvent() {
+  var taskListItemCheckboxes = document.body.getElementsByClassName('task-list-item-checkbox')
+  for (var i = 0; i < taskListItemCheckboxes.length; i++) {
+    var checkbox = taskListItemCheckboxes[i]
+    var li = checkbox.parentElement
+    if (li.tagName !== 'LI') li = li.parentElement
+    if (li.tagName === 'LI') {
+      li.classList.add('task-list-item')
+    }
+  }
+}())    
+</script>
+    
+<script>
+
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+  </html>
